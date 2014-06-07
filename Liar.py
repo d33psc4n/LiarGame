@@ -103,7 +103,10 @@ elif displayer == "s":
 helper = raw_input("Do you want to view the game rules?(y/n)\n> ")
 if helper == "y":
 	os.chdir("..")
-	helping = subprocess.Popen(["gedit", "inst.txt"])
+	txtviewer2 = raw_input("Choose your text viewer(Leave blank for nano):\n>  ")
+	if txtviewer2 == "":
+		txtviewer2 = "nano" 
+	helping = subprocess.Popen([txtviewer2, "inst.txt"])
 	helping.wait()
 	os.chdir("Poze")
 os.system("clear")
