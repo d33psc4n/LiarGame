@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # I need to fill those
 # How many do i neeed really
 # I saw quite a few at some people  
