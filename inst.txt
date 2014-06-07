@@ -1,0 +1,11 @@
+GAME RULES: 
+
+Simple rules :D 
+
+- If Player1 starts , then PLayer2 will stay face away from the monitor, so that Player1 can control the game. 
+- Player1 will receive 10 images, which he has to describe to Player2 (Here's the tricky part: He can lie or tell the truth!)
+- It's up to Player2 to tell if what he heard was a lie or truth. 
+- If Player2 is right, Player1 marks that as a "y" . In the other case, he writes down an "n"
+- At the end , both scores are compared and the winner is declared
+
+Have fun!
