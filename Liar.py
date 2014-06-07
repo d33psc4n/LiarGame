@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # I need to fill those
 # How many do i neeed really
 # I saw quite a few at some people really 
@@ -103,35 +104,66 @@ elif displayer == "s":
 helper = raw_input("Do you want to view the game rules?(y/n)\n> ")
 if helper == "y":
 	os.chdir("..")
-	helping = subprocess.Popen(["gedit", "inst.txt"])
+	txtviewer2=raw_input("Please enter your text viewer(Leave blank for nano):\n> ")
+	if txtviewer2 == "":
+		txtviewer2 = "nano"
+	helping = subprocess.Popen([txtviewer2, "inst.txt"])
 	helping.wait()
 	os.chdir("Poze")
 os.system("clear")
-rounds = raw_input("How many rounds are you going to play?\n> ")
-rounds = int(rounds)
+defaultchoice = raw_input("Do you want to use default game settings?(y/n):\n> ")
 os.system("clear")
+if defaultchoice == "y" or defaultchoice == "":
+	rounds = 5
+	os.system("clear")
+else:
+	rounds = raw_input("How many rounds are you going to play?\n> ")
+	rounds = int(rounds)
+	os.system("clear")
 player = raw_input("Are you evaluating player 1 or 2?\n> ")
 os.system("clear")
 if player == "1":
-	timer = raw_input("Set time to view images:\n> ")
-	timer = int(timer)
+	if defaultchoice == "y" or defaultchoice == "":
+		timer = 10
+	else:
+		timer = raw_input("Set time to view images:\n> ")
+		while timer == "":
+			timer = raw_input("Set time to view images:\n> ")
+		timer = int(timer)
 	os.system("clear")
 	Player1()
-	timer2 = raw_input("Set time to view images:\n> ")
-	timer2 = int(timer2)
+	if defaultchoice == "y" or defaultchoice == "":
+		timer2 = 10
+	else:
+		timer2 = raw_input("Set time to view images:\n> ")
+		while timer2 == "":
+			timer2 = raw_input("Set time to view images:\n> ")
+		timer2 = int(timer2)
 	os.system("clear")
 	Player2()
 elif player == "2":
-	timer2 = raw_input("Set time to view images:\n> ")
-	timer2 = int(timer2)
+	if defaultchoice == "y" or defaultchoice == "":
+		timer2 = 10
+	else:	
+		timer2 = raw_input("Set time to view images:\n> ")
+		while timer2 == "":
+			timer2 = raw_input("Set time to view images:\n> ")
+		timer2 = int(timer2)
 	os.system("clear")
 	Player2();
-	timer = raw_input("Set time to view images: \n> ")
-	timer = int(timer)
+	if defaultchoice == "y" or "":
+		timer = 10
+	else:
+		timer = raw_input("Set time to view images: \n> ")
+		while timer == "":
+			timer = raw_input("Set time to view images: \n> ")
+		timer = int(timer)
 	os.system("clear")
 	Player1()
 else:
 	print "Please try again!"
+	sys.exit()
+	sys.exit()
 
 time.sleep(1)
 os.system("clear")
@@ -156,7 +188,6 @@ elif count1C == count2C:
 else:
 	file.write("Winner: Player2. Congratz Player2!")
 file.close();
-os.system("clear")
 txtviewer = raw_input("Choose your text viewer(Leave blank for nano):\n>  ")
 if txtviewer == "":
 	txtviewer = "nano"  
