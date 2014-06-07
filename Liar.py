@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # I need to fill those
 # How many do i neeed really
-# I saw quite a few at some people really 
+# I saw quite a few at some people  
 # I will put 5 at least.
 # Yeah 5 is good
 # Shit last one was 5... 6 be it then.
@@ -107,6 +107,9 @@ if helper == "y":
 	txtviewer2=raw_input("Please enter your text viewer(Leave blank for nano):\n> ")
 	if txtviewer2 == "":
 		txtviewer2 = "nano"
+	txtviewer2 = raw_input("Choose your text viewer(Leave blank for nano):\n>  ")
+	if txtviewer2 == "":
+		txtviewer2 = "nano" 
 	helping = subprocess.Popen([txtviewer2, "inst.txt"])
 	helping.wait()
 	os.chdir("Poze")
