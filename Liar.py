@@ -1,6 +1,6 @@
 # I need to fill those
 # How many do i neeed really
-# I saw quite a few at some people really 
+# I saw quite a few at some people  
 # I will put 5 at least.
 # Yeah 5 is good
 # Shit last one was 5... 6 be it then.
